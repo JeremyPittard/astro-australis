@@ -1,0 +1,6 @@
+/* don't need to go full ITCSS on this project but settings can be found here */
+
+@import "./colors.css";
+@import "./typography.css";
+@import "./layout.css";
+@import "./spacing.css";

@@ -1,0 +1,14 @@
+/* importing fonts here */
+@font-face {
+  font-family: "lexend";
+  src: url("/fonts/lexend.ttf") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "baskerville";
+  src: url("/fonts/baskerville.ttf") format("woff");
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,18 @@
+:root {
+  --opacity: 0.3;
+  --color-dark-navy: hsl(214, 50%, 13%);
+  --color-pale-blue: hsl(180, 100%, 95%);
+  --color-pale-blue-opaque: hsla(180, 100%, 95%, var(--opacity));
+  --color-bright-green: hsl(128, 67%, 64%);
+  --color-vibrant-pink: hsl(310, 77%, 76%);
+  --gradient: linear-gradient(
+    45deg,
+    var(--color-vibrant-pink),
+    var(--color-bright-green)
+  );
+  --gradient-reverse: linear-gradient(
+    45deg,
+    var(--color-bright-green),
+    var(--color-vibrant-pink)
+  );
+}
