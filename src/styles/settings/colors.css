@@ -1,10 +1,14 @@
 :root {
   --opacity: 0.3;
   --color-dark-navy: hsl(214, 50%, 13%);
-  --color-pale-blue: hsl(180, 100%, 95%);
+  --color-pale-blue: #e4ffff;
   --color-pale-blue-opaque: hsla(180, 100%, 95%, var(--opacity));
   --color-bright-green: hsl(128, 67%, 64%);
+  --color-bright-green-dark: hsl(130, 38%, 25%);
+  --color-bright-green-darkest: hsl(130, 38%, 13%);
   --color-vibrant-pink: hsl(310, 77%, 76%);
+  --color-vibrant-pink-dark: hsl(310, 77%, 56%);
+  --color-vibrant-pink-darkest: hsl(310, 77%, 36%);
   --gradient: linear-gradient(
     45deg,
     var(--color-vibrant-pink),
@@ -14,5 +18,15 @@
     45deg,
     var(--color-bright-green),
     var(--color-vibrant-pink)
+  );
+  --gradient-dark: linear-gradient(
+    45deg,
+    var(--color-vibrant-pink-dark),
+    var(--color-bright-green-dark)
+  );
+  --gradient-reverse-dark: linear-gradient(
+    45deg,
+    var(--color-bright-green-dark),
+    var(--color-vibrant-pink-dark)
   );
 }

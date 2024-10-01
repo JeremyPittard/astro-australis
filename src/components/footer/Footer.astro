@@ -1,0 +1,43 @@
+---
+import { PUBLIC_SITE_URL } from "astro:env/client";
+import ExternalLink from "../external-link/ExternalLink.astro";
+
+---
+
+<footer>
+    <div>logo</div>
+    <div>
+        <p>
+        Glance at your phone, <span class="text-gradient bold">Gaze</span> at the sky.
+        </p>
+    </div>
+    <div> made by <ExternalLink href={PUBLIC_SITE_URL!}>this guy.</ExternalLink></div>
+</footer>
+<style>
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1400px;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--spacing-xxxl) var(--spacing-md);
+        border-top: 2px solid var(--color-pale-blue-opaque);
+        flex-direction: column;
+        gap: var(--spacing-xxl);
+        font-size: var(--body-font-size);
+        
+        div {
+            flex: 1;
+            text-align: center;
+            &:first-of-type {text-align: left;}
+            &:last-of-type {text-align: right;}
+        }
+        
+        @media (min-width: 1024px) {
+            --body-font-size: 18px;
+            flex-direction: row;
+            gap: var(--spacing-md);
+        }
+    }
+</style>

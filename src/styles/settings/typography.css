@@ -1,9 +1,17 @@
 :root {
   --body-text-family: "lexend", sans-serif;
-  --body-text-base-size: 18px;
   --body-text-color: var(--color-pale-blue);
 
   --heading-text-family: "baskerville", serif;
   --heading-text-color: var(--color-pale-blue);
-  --heading-text-size: 48px;
+
+  --body-font-size: 18px;
+  --heading-font-size: 32px;
+  --large-heading-font-size: 54px;
+
+  @media (min-width: 1024px) {
+    --body-font-size: 28px;
+    --heading-font-size: 68px;
+    --large-heading-font-size: 132px;
+  }
 }

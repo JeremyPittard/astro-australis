@@ -1,0 +1,21 @@
+---
+import Accordion from "../accordion/Accordion.astro";
+import AccordionItem from "../accordion/AccordionItem.astro";
+import FaqList from "./faqs";
+ 
+---
+<section class="faqs">
+    <div class="container">
+        {FaqList.map((q) => {
+            return(
+                <Accordion>
+                    <AccordionItem header={q.question}>
+                    <p>{q.answer}</p>
+                    </AccordionItem>
+                </Accordion>
+            )
+        })}
+    </div>
+</section>
+
+<!-- https://www.naseba.info -->

@@ -1,5 +1,6 @@
 ---
-import Coffee from "../icons/coffee.astro";
+import { Icon } from 'astro-icon/components'
+
 import { PUBLIC_BMAC_URL } from "astro:env/client";
 
 ---
@@ -8,14 +9,10 @@ import { PUBLIC_BMAC_URL } from "astro:env/client";
   <div class="inner">
     <h1 class="title">The 
       <span class="text-gradient">Southern Lights,</span> simplified.</h1>
-      <!-- <p class="description">
-        Glance at your phone, <b>Gaze</b> at the sky
-      </p> -->
       <div class="btn-container">
-
         <a href="/dashboard" class="btn">Show Me The Light!</a>
         <a href={PUBLIC_BMAC_URL} class="btn secondary" target="_blank" rel="noopener noreferrer">
-          <Coffee size={'27px'} />
+         <Icon name="tabler:cup" />
           Caffeinate Me
         </a>
       </div>
@@ -25,8 +22,7 @@ import { PUBLIC_BMAC_URL } from "astro:env/client";
 
 <style>
 .hero {
- --font-size: calc(var(--body-text-base-size) * 1.5);
-  padding: var(--spacing-xxl);
+  padding: var(--spacing-sm);
   height: 90svh;
   position: relative;
   box-sizing: border-box;
@@ -34,7 +30,7 @@ import { PUBLIC_BMAC_URL } from "astro:env/client";
   overflow: hidden;
   display: flex;
   align-items: center;
-
+  
   .inner {
     position: relative;
     z-index: 1;
@@ -46,33 +42,24 @@ import { PUBLIC_BMAC_URL } from "astro:env/client";
     margin: 0 auto;
     
     h1 {
-      --heading-text-size: 54px;
+      font-size: var(--large-heading-font-size);
       text-shadow: 1px 1px 1px var(--background-color);
-      
-      .text-gradient {
-        background-image: var(--gradient);
-        background-clip: text;
-        -webkit-text-stroke: 1px solid var(--background-color);
-        -webkit-text-fill-color: transparent;
-        text-shadow: none;
-      }
-      
-      @media (min-width: 1024px) {
-        --heading-text-size: 132px;
-        
-        
-      }
     }
     
     .btn-container {
       display: flex;
       gap: var(--spacing-xxl);
+      flex-direction: column;
+      
+      @media (min-width: 1024px) {
+        flex-direction: row;
+      }
     }
     
     @media ((min-width: 1024px)) {
-      max-width: 1320px;
+      max-width: 1380px;
       padding: var(--spacing-lg);
-
+      
     }
   }
   
@@ -87,6 +74,10 @@ import { PUBLIC_BMAC_URL } from "astro:env/client";
     z-index: 2;
     background: var(--background-color);
     filter: blur(10px);
+  }
+  
+  @media (min-width: 1024px) {
+    padding: var(--spacing-xxl);
   }
 }
 
@@ -108,7 +99,7 @@ import { PUBLIC_BMAC_URL } from "astro:env/client";
   filter: blur(100px);
 
   @media (prefers-reduced-motion: no-preference) {
-    animation: auroraAnimation 7.5s ease-in-out infinite alternate;
+    animation: auroraAnimation 10s ease-in-out infinite alternate;
   }
 }
 

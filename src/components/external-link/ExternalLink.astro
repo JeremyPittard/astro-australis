@@ -1,0 +1,14 @@
+---
+import { Icon } from 'astro-icon/components';
+
+
+interface Props {
+	children: any;
+    href: string;
+}
+
+const { href } = Astro.props
+---
+<a href={href} class="external-link" target="_blank" rel="noopener noreferrer">
+    <slot /> <Icon name="tabler:external-link" />
+</a>
